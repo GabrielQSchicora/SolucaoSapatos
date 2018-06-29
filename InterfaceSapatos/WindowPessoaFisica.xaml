@@ -1,0 +1,55 @@
+﻿<Window x:Class="InterfaceSapatos.WindowPessoaFisica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfaceSapatos"
+        mc:Ignorable="d"
+        Title="Pessoa Fisica" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0">Id:</Label>
+        <TextBox Text="{Binding Path=PessoaFisicaSelecionada.ID}" Grid.Row="0" Grid.Column="1" IsReadOnly="True"></TextBox>
+        
+        <Label Grid.Row="1">Nome:</Label>
+        <TextBox Text="{Binding Path=PessoaFisicaSelecionada.Nome}" Grid.Row="1" Grid.Column="1"></TextBox>
+
+        <Label Grid.Row="2">CPF:</Label>
+        <TextBox Text="{Binding Path=PessoaFisicaSelecionada.CPF}" Grid.Row="2" Grid.Column="1"></TextBox>
+
+        <Label Grid.Row="3">Data de Nascimento:</Label>
+        <DatePicker SelectedDate="{Binding Path=PessoaFisicaSelecionada.DataNascimento}" Grid.Row="3" Grid.Column="1"></DatePicker>
+
+        <Button Grid.Row="4" Margin="10" Grid.ColumnSpan="2" Width="280px" Visibility="{Binding Path=visibilidadeDataGrid}" x:Name="exportarVendaPorPF" Click="exportarVendaPorPF_Click">Exportar vendas por cliente</Button>
+        
+        <DataGrid x:Name="gridPessoaFisica" Grid.Row="5" Grid.ColumnSpan="2" Margin="10" Visibility="{Binding Path=visibilidadeDataGrid}" 
+                  ItemsSource="{Binding Path=PessoasFisicas}" 
+                  AutoGenerateColumns="False" 
+                  SelectedItem="{Binding Path=PessoaFisicaSelecionada}"
+                  PreviewKeyDown="GridPessoaFisica_KeyDown"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="CPF" Binding="{Binding CPF}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Data de Nascimento" Binding="{Binding DataNascimento}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Salvar" x:Name="SaveButton" Click="SaveButton_Click" Background="DarkGreen" Margin="10" Grid.Row="6" Width="90"/>
+        <Button  Content="Cancelar" x:Name="CacelButton" Click="CancelButton_Click" Background="DarkRed" Grid.Column="1"  Margin="10" Grid.Row="6"  Width="90" />
+
+    </Grid>
+</Window>

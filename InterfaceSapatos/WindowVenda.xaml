@@ -1,0 +1,66 @@
+﻿<Window x:Class="InterfaceSapatos.WindowVenda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfaceSapatos"
+        mc:Ignorable="d"
+        Title="Venda" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0">Cliente:</Label>
+        <TextBox Text="{Binding Path=VendaSelecionada.cliente.Nome}" Grid.Row="0" Grid.Column="1" IsReadOnly="True"></TextBox>
+        
+        <Label Grid.Row="1">Produto:</Label>
+        <TextBox Text="{Binding Path=VendaSelecionada.sapato.Nome}" Grid.Row="1" Grid.Column="1" IsReadOnly="True"></TextBox>
+        
+        <Label Grid.Row="2">Tamanho:</Label>
+        <ComboBox 
+            x:Name="TamanhosBox"
+            ItemsSource="{Binding Path=VendaSelecionada.sapato.Tamanhos}"
+            DisplayMemberPath="Tamanho"
+            SelectedItem="{Binding Path=TamanhoSelecionado}"
+            Grid.Row="2" Grid.Column="1"></ComboBox>
+        
+        <Label Grid.Row="3">Quantidade:</Label>
+        <TextBox Text="{Binding Path=VendaSelecionada.Quantidade}" Grid.Row="3" Grid.Column="2"></TextBox>
+
+        <DataGrid Grid.Row="4" Margin="10"
+                  ItemsSource="{Binding Path=Pessoas}"
+                  AutoGenerateColumns="True"
+                  SelectedItem="{Binding Path=VendaSelecionada.cliente}"
+                  CanUserDeleteRows="False"
+                  CanUserAddRows="False"/>
+
+        <DataGrid Grid.Row="4" Grid.Column="1" Margin="10"
+                  ItemsSource="{Binding Path=Sapatos}"
+                  AutoGenerateColumns="False"
+                  SelectedItem="{Binding Path=VendaSelecionada.sapato}"
+                  CanUserDeleteRows="False"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Cadarço" Binding="{Binding Cadarco}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Material" Binding="{Binding Material}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Cor" Binding="{Binding Cor}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Preço" Binding="{Binding Preco}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Salvar" x:Name="SaveButton" Click="SaveButton_Click" Background="DarkGreen" Margin="10" Grid.Row="5" Width="90"/>
+        <Button Content="Cancelar" x:Name="CacelButton" Click="CancelButton_Click" Background="DarkRed" Grid.Column="1"  Margin="10" Grid.Row="5"  Width="90" />
+
+    </Grid>
+</Window>

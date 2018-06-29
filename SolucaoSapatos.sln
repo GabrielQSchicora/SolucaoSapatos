@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaSapatos", "BibliotecaSapatos\BibliotecaSapatos.csproj", "{9A855300-493A-495C-834C-A9E002F87EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSapatos", "InterfaceSapatos\InterfaceSapatos.csproj", "{4C44D083-8B41-47E1-80FB-E99C6B5E75F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A855300-493A-495C-834C-A9E002F87EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A855300-493A-495C-834C-A9E002F87EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A855300-493A-495C-834C-A9E002F87EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A855300-493A-495C-834C-A9E002F87EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C44D083-8B41-47E1-80FB-E99C6B5E75F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C44D083-8B41-47E1-80FB-E99C6B5E75F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C44D083-8B41-47E1-80FB-E99C6B5E75F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C44D083-8B41-47E1-80FB-E99C6B5E75F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32FBB8C0-0590-47BE-BDC3-8C71494F9D6E}
+	EndGlobalSection
+EndGlobal

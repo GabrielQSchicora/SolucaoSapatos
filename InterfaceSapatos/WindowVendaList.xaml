@@ -1,0 +1,28 @@
+﻿<Window x:Class="InterfaceSapatos.WindowVendaList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfaceSapatos"
+        mc:Ignorable="d"
+        Title="Lista de Vendas" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="dataGridVenda" HorizontalAlignment="Left" Margin="10,10,0,0" 
+                  VerticalAlignment="Top" Height="405" Width="772"
+                  ItemsSource="{Binding Path=Vendas}"
+                  AutoGenerateColumns="False"
+                  SelectedItem="{Binding Path=VendaSelecionada}"
+                  PreviewKeyDown="dataGridVenda_PreviewKeyDown"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Cliente" Binding="{Binding cliente.Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Sapato" Binding="{Binding sapato.Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tamanho" Binding="{Binding Tamanho}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Preço Unitario" Binding="{Binding PrecoUnitario}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Preço Final" Binding="{Binding PrecoFinal}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
