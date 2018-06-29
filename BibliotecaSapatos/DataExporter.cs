@@ -66,11 +66,8 @@ namespace BibliotecaSapatos
                 line++;
             }
 
-            //
+            //Estilo da planilha
             workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -132,11 +129,8 @@ namespace BibliotecaSapatos
                 line++;
             }
 
-            //
+            //Estilo da planilha
             workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -209,11 +203,8 @@ namespace BibliotecaSapatos
                 line++;
             }
 
-            //
+            //Estilo da planilha
             workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -285,11 +276,8 @@ namespace BibliotecaSapatos
                 worksheet.Row(line).Style.Fill.BackgroundColor = XLColor.LightGray;
                 worksheet.Row(line).Style.Font.Bold = true;
 
-                //
+                //Estilo da planilha
                 workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-                //
-                workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
                 //Salva a planilha
                 workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -365,12 +353,9 @@ namespace BibliotecaSapatos
                 //Acrescenta a linha
                 line++;
             }
-            
-            //
-            workbook.ReferenceStyle = XLReferenceStyle.A1;
 
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
+            //Estilo da planilha
+            workbook.ReferenceStyle = XLReferenceStyle.A1;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -446,11 +431,8 @@ namespace BibliotecaSapatos
                 line++;
             }
 
-            //
+            //Estilo da planilha
             workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -526,11 +508,8 @@ namespace BibliotecaSapatos
                 line++;
             }
 
-            //
+            //Estilo da planilha
             workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
@@ -606,11 +585,8 @@ namespace BibliotecaSapatos
                 line++;
             }
 
-            //
+            //Estilo da planilha
             workbook.ReferenceStyle = XLReferenceStyle.A1;
-
-            //
-            workbook.CalculateMode = ClosedXML.Excel.XLCalculateMode.Auto;
 
             //Salva a planilha
             workbook.SaveAs(caminho, true, evaluateFormulae: true);
